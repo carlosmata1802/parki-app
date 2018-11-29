@@ -1,1 +1,1 @@
-# parki-app
+# parkiapp
