@@ -45,31 +45,28 @@
         </nav>
       </div>
     </header>
-    <div class="">
+    <div class="card">
       <form class="" method="POST">
         {% csrf_token %}
         <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <div class="img-rounded-profile">
-                <img src="" alt="">
-              </div>
+          <div class="col-md-4">
+            <div class="img_car rounded_image_profile" id="list" style="width:197px; height:197px; border-radius: 50%; overflow: hidden; ">
             </div>
+            <label for="">Foto</label>
+            {{ form.avatar }}
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <div class="form-group">
-                <label for="{{ form.username.id_for_label }}">Nombre*</label>
-                {{ form.first_name }}
-              </div>
-              <div class="form-group ">
-                <label for="{{ form.username.id_for_label }}">Apellido*</label>
-                {{ form.last_name }}
-              </div>
-              <div class="form-group ">
-                <label for="{{ form.username.id_for_label }}">Email*</label>
-                {{ form.email }}
-              </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <label for="{{ form.username.id_for_label }}">Nombre*</label>
+              {{ form.first_name }}
+            </div>
+            <div class="form-group ">
+              <label for="{{ form.username.id_for_label }}">Apellido*</label>
+              {{ form.last_name }}
+            </div>
+            <div class="form-group ">
+              <label for="{{ form.username.id_for_label }}">Email*</label>
+              {{ form.email }}
             </div>
           </div>
           <div class="col-md-3">

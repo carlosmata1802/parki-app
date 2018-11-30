@@ -22,7 +22,7 @@ def login(request):
         else:
             mensaje = 'Revisa tus credenciales'
 
-    template = 'nosotros.html'
+    template = 'login.html'
     context = {
         'messange': mensaje,
     }
