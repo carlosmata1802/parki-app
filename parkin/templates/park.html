@@ -103,8 +103,9 @@
                         <div class="status_car">
                           {% if car.status == 'FR' %}
                             <a href="#" class="add_car_button">Agregar tiempo</a>
+                            --:--
                           {% else %}
-                            <p>Te quedan tantos minutos </p>
+                            <p>Te quedan:  {{ car.hr }} horas con {{ car.minut }} minutos </p>
                           {% endif %}
                         </div>
                       </div>

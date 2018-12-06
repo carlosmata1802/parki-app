@@ -80,17 +80,6 @@ WSGI_APPLICATION = 'parkiapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'parkiapp',
-        'USER': 'digimundo',
-        'PASSWORD': '#Tesca_Corporation',
-        'HOST': 'localhost',
-        'PORT': 5432,
-    }
-} """
 
 DATABASES = {
     'default': {
@@ -150,3 +139,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
 LOGIN_URL = '/login/'
 
 LOGIN_REDIRECT_URL = '/'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'charlixd.cm@gmail.com'
+EMAIL_HOST_PASSWORD = 'Bobmarley1905'

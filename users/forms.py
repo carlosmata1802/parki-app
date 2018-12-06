@@ -7,11 +7,11 @@ class LogInForm(forms.Form):
     Usuario = forms.CharField(max_length=20)
     Contraseña = forms.CharField(max_length=20, widget=forms.PasswordInput())
 
-
 class RegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = (
+            'username',
             'first_name',
             'last_name',
             'email',
@@ -25,10 +25,3 @@ class RegisterForm(UserCreationForm):
             'zip_code',
             'avatar'
         )
-        labels = {
-            'username': 'Nombre de usuario',
-            'email': 'Correo electronico',
-            'rol': 'Tipo de usuario',
-            'password1': 'Contraseña',
-            'password2': 'Confirmar contraseña',
-        }

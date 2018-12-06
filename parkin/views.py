@@ -23,10 +23,13 @@ def park(request):
             }
         else:
             template = 'register_car.html'
-            form = PlatesForm(request.POST or None)
+            form = RegisterCar(request.POST or None)
             if request.method == 'POST':
                 plate = request.POST.get('plates')
-                Car.objects.create(user=request.user, plates=plate,)
+                model = request.POST.get("model")
+                photo = request.POST.get('photo')
+                company = request.POST.get('company')
+                Car.objects.create(user=request.user, plates=plate, model = model, photo = photo, company = 'company')
                 return redirect('park:park')
             context = {
                 'form': form
@@ -37,10 +40,18 @@ def park(request):
 def register_car(request):
     template = 'register_car.html'
     f = RegisterCar()
+    cars = Car.objects.filter(user=request.user.pk)
+
+    if cars:
+        title = "Agrega tu nuevo carro "
+    else:
+        title = "Agrega un carro para poder continuar C:"
+
+
     messages = None
     context = {
-        'title': 'Registro de carro',
         'form': f,
+        'title': title,
         'message': messages
     }
     if request.method == 'POST':

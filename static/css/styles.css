@@ -113,3 +113,23 @@ button.add_car_button:focus {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+#registerUser .form-group {
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#registerUser .form-group label, #registerUser .form-group input  {
+  width: 100%;
+  color: #666666;
+
+}
+#registerUser .form-group label {
+    text-transform: capitalize;
+}
+
+#registerUser .card {
+  padding-bottom: 2rem;
+}
+#registerUser .rounded_image_profile {
+  background-image: url("../images/owner_profile.jpg");
+}
